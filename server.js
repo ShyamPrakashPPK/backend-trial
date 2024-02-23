@@ -30,7 +30,7 @@ const users = [
 app.use(express.json());
 
 // Enable CORS for all routes
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: '*', methods: 'GET,HEAD,PUT,PATCH,POST,DELETE' }));
 
 // Login endpoint
 app.post('/login', async (req, res) => {
